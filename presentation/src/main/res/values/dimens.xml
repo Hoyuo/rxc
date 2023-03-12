@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="arrow_start_margin">16dp</dimen>
+    <dimen name="recycler_view_width_space">16dp</dimen>
+    <dimen name="recycler_view_height_space">16dp</dimen>
+    <dimen name="recycler_view_horizontal_space">24dp</dimen>
+    <dimen name="consumer_price_margin_top">8dp</dimen>
+    <dimen name="price_margin_top">8dp</dimen>
+    <dimen name="price_margin_start">8dp</dimen>
+    <dimen name="product_description_height">144dp</dimen>
+</resources>

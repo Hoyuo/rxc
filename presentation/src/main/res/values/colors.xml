@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navigation_bg_color">#FFFFFF</color>
+    <color name="navigation_text_color">#000000</color>
+    <color name="wishlist_bg_color">#FFFFFF</color>
+</resources>

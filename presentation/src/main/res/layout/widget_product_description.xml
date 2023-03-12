@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/product_description_height"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textAppearance="@style/RXCTheme.Product.Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Product name" />
+
+    <TextView
+        android:id="@+id/discount_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/RXCTheme.Product.DiscountRate"
+        app:layout_constraintBaseline_toBaselineOf="@id/price"
+        app:layout_constraintEnd_toStartOf="@id/price"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="10%" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/price_margin_start"
+        android:layout_marginTop="@dimen/price_margin_top"
+        android:textAppearance="@style/RXCTheme.Product.Price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/discount_rate"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="2,160,000원" />
+
+    <TextView
+        android:id="@+id/consumer_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/consumer_price_margin_top"
+        android:textAppearance="@style/RXCTheme.Product.ConsumerPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        tools:text="1,800,000원" />
+</androidx.constraintlayout.widget.ConstraintLayout>
