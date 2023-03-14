@@ -16,12 +16,14 @@ class GetGoodListUseCase @Inject constructor(
     private val updateGoodListUseCase: UpdateGoodListUseCase,
     @Dispatcher(RXCDispatchers.Io) dispatcher: CoroutineDispatcher,
 ) : ActionFlowUseCase<List<GoodDomainModel>>(dispatcher) {
-    override fun execute() = goodRepository.getListLocal().map { localGoods ->
-        if (localGoods.isNotEmpty()) {
-            Result.success(localGoods.map { GoodDomainModel(it) })
-        } else {
-            updateGoodListUseCase()
-            Result.failure(Throwable("Local data not found."))
+    override fun execute() = goodRepository
+        .getListLocal()
+        .map { localGoods ->
+            if (localGoods.isNotEmpty()) {
+                Result.success(localGoods.map { GoodDomainModel(it) })
+            } else {
+                updateGoodListUseCase()
+                Result.failure(Throwable("Local data not found."))
+            }
         }
-    }
 }
